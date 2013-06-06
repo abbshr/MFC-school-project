@@ -1,0 +1,27 @@
+// Person.cpp: implementation of the CPerson class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "manager.h"
+#include "Person.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CPerson::CPerson()
+{
+
+}
+
+CPerson::~CPerson()
+{
+
+}

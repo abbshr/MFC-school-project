@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: manager - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/manager.res" /d "_DEBUG" /d "_AFXDLL" "D:\bookmanage\manager\manager.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP4A23.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/manager.pdb" /debug /machine:I386 /out:"Debug/manager.exe" /pdbtype:sept 
+.\Debug\Admin.obj
+.\Debug\Book.obj
+.\Debug\CTRLLOG.obj
+.\Debug\DOLOG.obj
+.\Debug\DOREG.obj
+.\Debug\Help.obj
+.\Debug\MainFrm.obj
+.\Debug\manager.obj
+.\Debug\managerDoc.obj
+.\Debug\managerView.obj
+.\Debug\Person.obj
+.\Debug\StdAfx.obj
+.\Debug\Users.obj
+.\Debug\manager.res
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP4A23.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+manager.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
