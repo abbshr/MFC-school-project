@@ -16,12 +16,37 @@ static char THIS_FILE[]=__FILE__;
 // Construction/Destruction
 //////////////////////////////////////////////////////////////////////
 
-CAdmin::CAdmin()
+CAdmin::CAdmin(CString thisid, CString thiskey, CString thismessagebox[], CString thisemail)
 {
-
+	id = thisid;
+	key = thiskey;
+	for (int i = 0; i < thismessagebox.length - 1; i++)
+	{
+		mesagebox[i] = thismessagebox[i];
+	}
+	email = thisemail;
 }
 
-CAdmin::~CAdmin()
+void CAdmin::getAllUser()
 {
-
 }
+void CAdmin::addBook(CString addbname, CString addauthor, CString addbclass, int addyear, int addhot, int addtnum)
+{
+}
+void CAdmin::deleteBook(CString bname)
+{
+}
+void CAdmin::ctrlBook(CString bname)
+{
+}
+void CAdmin::searchUserViaName(CString username)
+{
+}
+void CAdmin::searchUserViaId(CString id)
+{
+}
+void CAdmin::setUserBorroable(CString username)
+{
+}
+
+

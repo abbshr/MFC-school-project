@@ -12,10 +12,11 @@
 class CPerson  
 {
 public:
+	CPerson(CString id, CString key, CString messagebox = ' ', CString email = ' ');
 	CString getId();
 	CString getEmail();
 	void searchBookViaName(CString bname);
-	void seaarchBookViaAuthor(CString author);
+	void searchBookViaAuthor(CString author);
 	void searchBookViaClass(CString bclass);
 	void searchBookViaHot();
 	void searchBookViaYear(int year);
@@ -25,6 +26,7 @@ public:
 			key,
 			email,
 			messagebox;
+	virtual ~CPerson();
 };
 
 #endif // !defined(AFX_PERSON_H__9F6C5C42_6135_4D5A_AE9B_7656F1D1ADEE__INCLUDED_)

@@ -1,7 +1,7 @@
 // Book.cpp: implementation of the CBook class.
 //
 //////////////////////////////////////////////////////////////////////
-
+#include "stdafx.h"
 #include "manager.h"
 #include "Book.h"
 
@@ -69,12 +69,12 @@ void CBook::delNum()
 	tnum--;
 }
 
-void CBook::addHot()
+void CBook::addNum()
 {
 	tnum++;
 }
 
-void CBook::setBookInfo(newbname, newauthor, newbclass, newyear, newtnum)
+void CBook::setBookInfo(CString newbname, CString newauthor, CString newbclass, int newyear, int newtnum)
 {
 	bname = newbname;
 	author = newauthor;
@@ -83,7 +83,3 @@ void CBook::setBookInfo(newbname, newauthor, newbclass, newyear, newtnum)
 	tnum = newtnum;
 }
 
-CBook::~CBook()
-{
-
-}

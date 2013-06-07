@@ -19,7 +19,7 @@ Class7=CManagerView
 
 ResourceCount=10
 Resource1=IDD_DIALOG2
-Resource2=IDR_MAINFRAME
+Resource2=IDD_DIALOG4
 Resource3=IDD_USER_REG
 Resource4=IDD_APP_README
 Class8=CHelp
@@ -29,7 +29,7 @@ Resource6=IDD_ADMIN_LOG
 Resource7=IDD_DIALOG3
 Resource8=IDD_ABOUTBOX
 Resource9=IDD_DIALOG1
-Resource10=IDD_DIALOG4
+Resource10=IDR_MAINFRAME
 
 [CLS:CDOLOG]
 Type=0
@@ -48,7 +48,7 @@ Type=0
 BaseClass=CFrameWnd
 HeaderFile=MainFrm.h
 ImplementationFile=MainFrm.cpp
-LastObject=ID_ADMIN_LOG
+LastObject=CMainFrame
 Filter=T
 VirtualFilter=fWC
 

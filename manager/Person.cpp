@@ -1,7 +1,7 @@
 // Person.cpp: implementation of the CPerson class.
 //
 //////////////////////////////////////////////////////////////////////
-
+#include "stdafx.h"
 #include "manager.h"
 #include "Person.h"
 
@@ -15,7 +15,7 @@ static char THIS_FILE[]=__FILE__;
 // Construction/Destruction
 //////////////////////////////////////////////////////////////////////
 
-CPerson::CPerson(CString id, CString key, CString messagebox = ' ', CString email = ' '):
+CPerson::CPerson(CString id, CString key, CString messagebox, CString email):
 	id(id), key(key), messagebox(messagebox), email(email)
 {
 }
@@ -104,7 +104,6 @@ void CPerson::addMessageToBox(CString msg)
 	messagebox = msg;
 }
 
-CPerson::~CPerson()
+CPerson::~CPerson() 
 {
-
 }
