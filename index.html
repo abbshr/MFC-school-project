@@ -3,32 +3,35 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <title>MFC-College-Project by abbshr</title>
   </head>
 
   <body>
+    <div id="container">
+      <div class="inner">
 
-    <header>
-      <div class="container">
-        <h1>MFC-College-Project</h1>
-        <h2>程序设计实践作业——图书管理系统模型</h2>
+        <header>
+          <h1>MFC-College-Project</h1>
+          <h2>程序设计实践作业——图书管理系统模型</h2>
+        </header>
 
-        <section id="downloads">
-          <a href="https://github.com/abbshr/MFC-school-project/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/abbshr/MFC-school-project/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/abbshr/MFC-school-project" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/abbshr/MFC-school-project/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/abbshr/MFC-school-project/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/abbshr/MFC-school-project" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
-      </div>
-    </header>
 
-    <div class="container">
-      <section id="main_content">
-        <h4>
+        <hr>
+
+        <section id="main_content">
+          <h4>
 <a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a>========================================================================</h4>
 
 <h3>
@@ -44,81 +47,122 @@ but is also a starting point for writing your application.</p>
 <p>This file contains a summary of what you will find in each of the files that
 make up your manager application.</p>
 
-<p>manager.dsp
-    This file (the project file) contains information at the project level and
-    is used to build a single project or subproject. Other users can share the
-    project (.dsp) file, but they should export the makefiles locally.</p>
+<h5>
+<a name="managerdsp" class="anchor" href="#managerdsp"><span class="octicon octicon-link"></span></a>manager.dsp</h5>
 
-<p>manager.h
-    This is the main header file for the application.  It includes other
-    project specific headers (including Resource.h) and declares the
-    CManagerApp application class.</p>
+<pre><code>This file (the project file) contains information at the project level and
+is used to build a single project or subproject. Other users can share the
+project (.dsp) file, but they should export the makefiles locally.
+</code></pre>
 
-<p>manager.cpp
-    This is the main application source file that contains the application
-    class CManagerApp.</p>
+<h5>
+<a name="managerh" class="anchor" href="#managerh"><span class="octicon octicon-link"></span></a>manager.h</h5>
 
-<p>manager.rc
-    This is a listing of all of the Microsoft Windows resources that the
-    program uses.  It includes the icons, bitmaps, and cursors that are stored
-    in the RES subdirectory.  This file can be directly edited in Microsoft
-    Visual C++.</p>
+<pre><code>This is the main header file for the application.  It includes other
+project specific headers (including Resource.h) and declares the
+CManagerApp application class.
+</code></pre>
 
-<p>manager.clw
-    This file contains information used by ClassWizard to edit existing
-    classes or add new classes.  ClassWizard also uses this file to store
-    information needed to create and edit message maps and dialog data
-    maps and to create prototype member functions.</p>
+<h5>
+<a name="managercpp" class="anchor" href="#managercpp"><span class="octicon octicon-link"></span></a>manager.cpp</h5>
 
-<p>res\manager.ico
-    This is an icon file, which is used as the application's icon.  This
-    icon is included by the main resource file manager.rc.</p>
+<pre><code>This is the main application source file that contains the application
+class CManagerApp.
+</code></pre>
 
-<p>res\manager.rc2
-    This file contains resources that are not edited by Microsoft 
-    Visual C++.  You should place all resources not editable by
-    the resource editor in this file.</p>
+<h5>
+<a name="managerrc" class="anchor" href="#managerrc"><span class="octicon octicon-link"></span></a>manager.rc</h5>
+
+<pre><code>This is a listing of all of the Microsoft Windows resources that the
+program uses.  It includes the icons, bitmaps, and cursors that are stored
+in the RES subdirectory.  This file can be directly edited in Microsoft
+Visual C++.
+</code></pre>
+
+<h5>
+<a name="managerclw" class="anchor" href="#managerclw"><span class="octicon octicon-link"></span></a>manager.clw</h5>
+
+<pre><code>This file contains information used by ClassWizard to edit existing
+classes or add new classes.  ClassWizard also uses this file to store
+information needed to create and edit message maps and dialog data
+maps and to create prototype member functions.
+</code></pre>
+
+<h5>
+<a name="resmanagerico" class="anchor" href="#resmanagerico"><span class="octicon octicon-link"></span></a>res\manager.ico</h5>
+
+<pre><code>This is an icon file, which is used as the application's icon.  This
+icon is included by the main resource file manager.rc.
+</code></pre>
+
+<h5>
+<a name="resmanagerrc2" class="anchor" href="#resmanagerrc2"><span class="octicon octicon-link"></span></a>res\manager.rc2</h5>
+
+<pre><code>This file contains resources that are not edited by Microsoft 
+Visual C++.  You should place all resources not editable by
+the resource editor in this file.
+</code></pre>
 
 <p>/////////////////////////////////////////////////////////////////////////////</p>
 
 <h4>
 <a name="for-the-main-frame-window" class="anchor" href="#for-the-main-frame-window"><span class="octicon octicon-link"></span></a>For the main frame window:</h4>
 
-<p>MainFrm.h, MainFrm.cpp
-    These files contain the frame class CMainFrame, which is derived from
-    CFrameWnd and controls all SDI frame features.</p>
+<h5>
+<a name="mainfrmh-mainfrmcpp" class="anchor" href="#mainfrmh-mainfrmcpp"><span class="octicon octicon-link"></span></a>MainFrm.h, MainFrm.cpp</h5>
 
-<p>res\Toolbar.bmp
-    This bitmap file is used to create tiled images for the toolbar.
-    The initial toolbar and status bar are constructed in the CMainFrame
-    class. Edit this toolbar bitmap using the resource editor, and
-    update the IDR_MAINFRAME TOOLBAR array in manager.rc to add
-    toolbar buttons.
-/////////////////////////////////////////////////////////////////////////////</p>
+<pre><code>These files contain the frame class CMainFrame, which is derived from
+CFrameWnd and controls all SDI frame features.
+</code></pre>
 
-<p>AppWizard creates one document type and one view:</p>
+<h5>
+<a name="restoolbarbmp" class="anchor" href="#restoolbarbmp"><span class="octicon octicon-link"></span></a>res\Toolbar.bmp</h5>
 
-<p>managerDoc.h, managerDoc.cpp - the document
-    These files contain your CManagerDoc class.  Edit these files to
-    add your special document data and to implement file saving and loading
-    (via CManagerDoc::Serialize).</p>
+<pre><code>This bitmap file is used to create tiled images for the toolbar.
+The initial toolbar and status bar are constructed in the CMainFrame
+class. Edit this toolbar bitmap using the resource editor, and
+update the IDR_MAINFRAME TOOLBAR array in manager.rc to add
+toolbar buttons.
+</code></pre>
 
-<p>managerView.h, managerView.cpp - the view of the document
-    These files contain your CManagerView class.
-    CManagerView objects are used to view CManagerDoc objects.</p>
+<p>/////////////////////////////////////////////////////////////////////////////</p>
+
+<h4>
+<a name="appwizard-creates-one-document-type-and-one-view" class="anchor" href="#appwizard-creates-one-document-type-and-one-view"><span class="octicon octicon-link"></span></a>AppWizard creates one document type and one view:</h4>
+
+<h5>
+<a name="managerdoch-managerdoccpp---the-document" class="anchor" href="#managerdoch-managerdoccpp---the-document"><span class="octicon octicon-link"></span></a>managerDoc.h, managerDoc.cpp - the document</h5>
+
+<pre><code>These files contain your CManagerDoc class.  Edit these files to
+add your special document data and to implement file saving and loading
+(via CManagerDoc::Serialize).
+</code></pre>
+
+<h5>
+<a name="managerviewh-managerviewcpp---the-view-of-the-document" class="anchor" href="#managerviewh-managerviewcpp---the-view-of-the-document"><span class="octicon octicon-link"></span></a>managerView.h, managerView.cpp - the view of the document</h5>
+
+<pre><code>These files contain your CManagerView class.
+CManagerView objects are used to view CManagerDoc objects.
+</code></pre>
 
 <p>/////////////////////////////////////////////////////////////////////////////</p>
 
 <h4>
 <a name="other-standard-files" class="anchor" href="#other-standard-files"><span class="octicon octicon-link"></span></a>Other standard files:</h4>
 
-<p>StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named manager.pch and a precompiled types file named StdAfx.obj.</p>
+<h5>
+<a name="stdafxh-stdafxcpp" class="anchor" href="#stdafxh-stdafxcpp"><span class="octicon octicon-link"></span></a>StdAfx.h, StdAfx.cpp</h5>
 
-<p>Resource.h
-    This is the standard header file, which defines new resource IDs.
-    Microsoft Visual C++ reads and updates this file.</p>
+<pre><code>These files are used to build a precompiled header (PCH) file
+named manager.pch and a precompiled types file named StdAfx.obj.
+</code></pre>
+
+<h5>
+<a name="resourceh" class="anchor" href="#resourceh"><span class="octicon octicon-link"></span></a>Resource.h</h5>
+
+<pre><code>This is the standard header file, which defines new resource IDs.
+Microsoft Visual C++ reads and updates this file.
+</code></pre>
 
 <p>/////////////////////////////////////////////////////////////////////////////</p>
 
@@ -138,9 +182,15 @@ don't do this, some of the UI elements of your application will remain in the
 language of the operating system.</p>
 
 <p>/////////////////////////////////////////////////////////////////////////////</p>
-      </section>
-    </div>
+        </section>
 
-    
+        <footer>
+          MFC-College-Project is maintained by <a href="https://github.com/abbshr">abbshr</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
   </body>
 </html>
