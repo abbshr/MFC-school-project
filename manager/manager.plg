@@ -6,8 +6,14 @@
 --------------------Configuration: manager - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "rc.exe /l 0x804 /fo"Debug/manager.res" /d "_DEBUG" /d "_AFXDLL" "D:\bookmanage\manager\manager.rc"" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP4A23.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP85B9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/manager.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\mfcpr\manager\Book.cpp"
+"D:\mfcpr\manager\Person.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP85B9.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP85BA.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/manager.pdb" /debug /machine:I386 /out:"Debug/manager.exe" /pdbtype:sept 
 .\Debug\Admin.obj
@@ -25,15 +31,20 @@ Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP4A23.tmp" with 
 .\Debug\Users.obj
 .\Debug\manager.res
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP4A23.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP85BA.tmp"
 <h3>Output Window</h3>
-Compiling resources...
-Linking...
+Compiling...
+Book.cpp
+d:\mfcpr\manager\book.cpp(90) : fatal error C1010: unexpected end of file while looking for precompiled header directive
+Person.cpp
+d:\mfcpr\manager\person.cpp(111) : fatal error C1010: unexpected end of file while looking for precompiled header directive
+Generating Code...
+Ö´ÐÐ cl.exe Ê±³ö´í.
 
 
 
 <h3>Results</h3>
-manager.exe - 0 error(s), 0 warning(s)
+manager.exe - 1 error(s), 0 warning(s)
 </pre>
 </body>
 </html>
