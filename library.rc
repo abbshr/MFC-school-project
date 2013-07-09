@@ -1,0 +1,485 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\library.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\library.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 library"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "library 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2013",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_LIBRARY_DIALOG DIALOGEX 0, 0, 255, 105
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "登陆"
+FONT 12, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,38,76,60,22
+    PUSHBUTTON      "取消",IDCANCEL,152,76,59,22
+    LTEXT           "ID",IDC_STATIC,41,19,27,13
+    EDITTEXT        IDC_EDIT1,77,16,96,18,ES_AUTOHSCROLL
+    LTEXT           "KEY",IDC_STATIC,41,39,27,13
+    EDITTEXT        IDC_EDIT2,77,35,96,18,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "管理员",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT,77,63,40,10
+    CONTROL         "用户",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,117,63,32,
+                    10
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 254, 152
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "管理中心"
+FONT 14, "微软雅黑"
+BEGIN
+    PUSHBUTTON      "添加新书",IDC_BUTTON5,34,30,91,26
+    PUSHBUTTON      "按书名查找图书",IDC_BUTTON6,34,60,91,26
+    PUSHBUTTON      "按分类查找图书",IDC_BUTTON7,34,90,91,26
+    PUSHBUTTON      "添加借阅者",IDC_BUTTON8,137,30,91,26
+    PUSHBUTTON      "封禁用户",IDC_BUTTON9,137,60,91,26
+    PUSHBUTTON      "查看用户归还情况",IDC_BUTTON10,137,90,91,26
+    PUSHBUTTON      "浏览全部藏书",IDC_BUTTON2,34,119,91,25
+    CTEXT           "图书管理",IDC_STATIC,65,14,29,8
+    CTEXT           "用户管理",IDC_STATIC,168,15,29,8
+    PUSHBUTTON      "清空图书数据库",IDC_BUTTON1,137,119,91,25
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 222, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户中心"
+FONT 14, "微软雅黑"
+BEGIN
+    PUSHBUTTON      "浏览所有图书",IDC_BUTTON1,25,8,79,28
+    PUSHBUTTON      "借书",IDC_BUTTON3,117,9,79,28
+    PUSHBUTTON      "个人信息",IDC_BUTTON4,117,42,79,28
+    PUSHBUTTON      "还书",IDC_BUTTON11,25,42,78,28
+    LISTBOX         IDC_LIST1,25,87,78,55,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,117,87,79,54,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "书名",IDC_STATIC,57,75,15,8
+    LTEXT           "数量",IDC_STATIC,150,75,15,8
+END
+
+IDD_DIALOG3 DIALOG DISCARDABLE  0, 0, 238, 134
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加新书"
+FONT 12, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,16,113,50,14
+    PUSHBUTTON      "取消",IDCANCEL,172,113,50,14
+    LTEXT           "书名",IDC_STATIC,47,23,20,8
+    LTEXT           "数目",IDC_STATIC,47,50,20,8
+    LTEXT           "类型",IDC_STATIC,47,73,20,8
+    LTEXT           "年代",IDC_STATIC,47,101,20,8
+    EDITTEXT        IDC_EDIT1,89,22,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,89,99,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,89,49,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,89,73,104,12,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG4 DIALOG DISCARDABLE  0, 0, 236, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "按书名查找图书"
+FONT 14, "微软雅黑"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,183,24,50,14
+    LTEXT           "图书名",IDC_STATIC,128,42,48,10
+    EDITTEXT        IDC_EDIT2,112,8,62,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST1,90,54,126,63,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "图书名",IDC_STATIC,55,9,48,10
+    LISTBOX         IDC_LIST2,29,54,48,63,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "数量",IDC_STATIC,44,43,15,8
+    PUSHBUTTON      "搜索",IDC_BUTTON1,183,3,50,14
+END
+
+IDD_DIALOG5 DIALOG DISCARDABLE  0, 0, 269, 124
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "分类查找"
+FONT 14, "微软雅黑"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,212,96,50,14
+    LTEXT           "该类型的图书列表",IDC_STATIC,115,19,66,10
+    EDITTEXT        IDC_EDIT1,206,39,56,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "搜索",IDC_BUTTON1,212,73,50,14
+    LISTBOX         IDC_LIST1,37,29,48,88,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,95,29,103,88,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "类型",IDC_STATIC,207,28,21,10
+END
+
+IDD_DIALOG6 DIALOG DISCARDABLE  0, 0, 336, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "浏览藏书"
+FONT 14, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,279,7,50,14
+    PUSHBUTTON      "返回",IDCANCEL,279,24,50,14
+    PUSHBUTTON      "查看所有",IDC_BUTTON1,279,55,50,14
+    LISTBOX         IDC_LIST1,27,35,115,75,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "图书列表",IDC_STATIC,97,20,43,11
+    LISTBOX         IDC_LIST2,163,36,48,74,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG7 DIALOG DISCARDABLE  0, 0, 187, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加借阅者"
+FONT 14, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "添加",IDOK,130,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,24,50,14
+    LTEXT           "用户名",IDC_STATIC,17,22,22,8
+    LTEXT           "密码",IDC_STATIC,17,40,15,8
+    EDITTEXT        IDC_EDIT1,48,20,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,48,42,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_DIALOG8 DIALOG DISCARDABLE  0, 0, 187, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "借书"
+FONT 14, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,18,47,50,14
+    PUSHBUTTON      "取消",IDCANCEL,119,47,50,14
+    LTEXT           "借阅书名",IDC_STATIC,37,28,29,8
+    EDITTEXT        IDC_EDIT1,66,25,71,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG9 DIALOG DISCARDABLE  0, 0, 187, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "还书"
+FONT 14, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,17,65,50,14
+    PUSHBUTTON      "取消",IDCANCEL,117,63,50,14
+    LTEXT           "输入要还的书",IDC_STATIC,15,43,42,8
+    EDITTEXT        IDC_EDIT1,60,41,85,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG10 DIALOG DISCARDABLE  0, 0, 187, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "还书"
+FONT 14, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,30,74,50,14
+    PUSHBUTTON      "取消",IDCANCEL,97,74,50,14
+    LTEXT           "书名",IDC_STATIC,42,40,15,8
+    EDITTEXT        IDC_EDIT1,69,38,80,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG11 DIALOG DISCARDABLE  0, 0, 289, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加个人信息"
+FONT 14, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "提交",IDOK,7,105,50,14
+    PUSHBUTTON      "不写",IDCANCEL,68,105,50,14
+    EDITTEXT        IDC_EDIT1,45,7,40,14,ES_AUTOHSCROLL
+    LTEXT           "姓名",IDC_STATIC,15,9,15,8
+    EDITTEXT        IDC_EDIT2,45,26,40,14,ES_AUTOHSCROLL
+    LTEXT           "联系电话",IDC_STATIC,14,29,29,8
+    EDITTEXT        IDC_EDIT3,45,44,40,14,ES_AUTOHSCROLL
+    LTEXT           "email",IDC_STATIC,15,46,19,8
+    EDITTEXT        IDC_EDIT4,45,62,40,14,ES_AUTOHSCROLL
+    LTEXT           "Q",IDC_STATIC,20,64,8,8
+    EDITTEXT        IDC_EDIT7,45,80,40,14,ES_AUTOHSCROLL
+    LTEXT           "工作单位",IDC_STATIC,13,82,29,8
+    LISTBOX         IDC_LIST1,100,7,168,84,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "显示个人信息",IDC_BUTTON1,217,93,50,14
+END
+
+IDD_DIALOG12 DIALOG DISCARDABLE  0, 0, 187, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找用户"
+FONT 14, "微软雅黑"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,130,7,50,14
+    PUSHBUTTON      "查找",IDC_BUTTON1,130,29,50,14
+    EDITTEXT        IDC_EDIT1,48,15,40,14,ES_AUTOHSCROLL
+    LTEXT           "用户名",IDC_STATIC,18,16,22,8
+    LISTBOX         IDC_LIST1,7,48,59,40,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,77,48,48,40,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "未还数量",IDC_STATIC,87,39,29,8
+    LTEXT           "用户名",IDC_STATIC,26,38,22,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "library Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "library\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2013\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "library.EXE\0"
+            VALUE "ProductName", "library 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_LIBRARY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        VERTGUIDE, 68
+        VERTGUIDE, 77
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        VERTGUIDE, 47
+        VERTGUIDE, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        RIGHTMARGIN, 233
+        VERTGUIDE, 90
+        BOTTOMMARGIN, 117
+        HORZGUIDE, 24
+    END
+
+    IDD_DIALOG5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_DIALOG6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_DIALOG7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DIALOG8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DIALOG9, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DIALOG10, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DIALOG11, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_DIALOG12, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 library(&A)..."
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\library.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
