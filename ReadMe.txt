@@ -2,6 +2,17 @@
        MICROSOFT FOUNDATION CLASS LIBRARY : library
 ========================================================================
 
+###各位同学大家好，这里是一个被MFC坑了的苦逼学生，院里的‘程序设计实践课’可谓是要多坑有多坑啊~~~。。
+
+这是个用上个世纪流行的库————MFC所编写的**图书管理系统**，苦逼的界面、苦逼的MFCAPI、苦逼的功能。。。
+
+今天是7月9号，也是deadline，我忙乎了整整一下午终于把之前两个月丝毫未动的任务完成了，不过做得相当水。。。
+
+不过现在不要管水不水了，能做完就不错了。。。MFC坑人坑到家了。。。。。
+
+今天特此将这个纸糊的建筑送到git上，不是为了发牢骚，主要目的是不想下届的再次被坑了，感觉MFC真没啥含金量，真不如好好学学C++的核心东西。。
+
+13级往后的同学，如果你们在为mfc焦头烂额时无意间翻到了这个傻傻的PO，它应该会帮到你们的~
 
 AppWizard has created this library application for you.  This application
 not only demonstrates the basics of using the Microsoft Foundation classes
