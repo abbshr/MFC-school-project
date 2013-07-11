@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "library.h"
 #include "Personal.h"
+#include "Public.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -54,6 +55,16 @@ void CPersonal::OnOK()
 	file.Open("userkey.txt",CFile::modeWrite|CFile::typeBinary);
 	file.SeekToEnd();
     file.WriteString(userkey+'\n');
+	file.Close();
+
+	file.Open("userinfo.txt",CFile::modeWrite|CFile::typeBinary);
+	file.SeekToEnd();
+    file.WriteString("info"+'\n');
+	file.Close();
+
+	file.Open("usernum.txt",CFile::modeWrite|CFile::typeBinary);
+	file.SeekToEnd();
+    file.WriteString("0"+'\n');
 	file.Close();
 
 	CDialog::OnOK();

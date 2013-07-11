@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "library.h"
 #include "Lend.h"
+#include "Public.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

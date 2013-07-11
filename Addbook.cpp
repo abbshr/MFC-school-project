@@ -7,6 +7,7 @@
 #include "master.h"
 #include "Book.h"
 #include "fstream.h"
+#include "Public.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

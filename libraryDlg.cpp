@@ -7,6 +7,7 @@
 #include "master.h"
 #include "user.h"
 #include "fstream.h"
+#include "Public.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -198,8 +199,10 @@ void CLibraryDlg::OnOK()
 		CStdioFile file("userid.txt",CFile::modeRead|CFile::typeBinary);
 		while (file.ReadString(id1)) {
 			i++;
-			if (id == id1)
+			if (id == id1) {
+				CPublic::mar(i);
 				break;
+			}
 		}
 		file.SeekToEnd();
 		file.Close();
@@ -207,7 +210,7 @@ void CLibraryDlg::OnOK()
 		file.Open("userkey.txt",CFile::modeRead|CFile::typeBinary);
 		while (file.ReadString(code1)) {
 			j++;
-			if (key == code1 && i == j) {
+			if (key == code1 && i == j ) {
 				succeed = true;
 				break;
 			}

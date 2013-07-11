@@ -2,44 +2,46 @@
 
 [General Info]
 Version=1
-LastClass=CFind
+LastClass=CDebook
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "library.h"
 
-ClassCount=15
+ClassCount=16
 Class1=CLibraryApp
 Class2=CLibraryDlg
 Class3=CAboutDlg
 
-ResourceCount=15
-Resource1=IDD_DIALOG10
+ResourceCount=16
+Resource1=IDD_DIALOG2
 Resource2=IDR_MAINFRAME
-Resource3=IDD_ABOUTBOX
+Resource3=IDD_LIBRARY_DIALOG
 Class4=CMaster
-Resource4=IDD_DIALOG4
+Resource4=IDD_DIALOG3
 Class5=CUser
-Resource5=IDD_DIALOG9
+Resource5=IDD_DIALOG10
 Class6=CAddbook
 Class7=CBook
-Resource6=IDD_DIALOG3
-Resource7=IDD_DIALOG1
+Resource6=IDD_DIALOG5
+Resource7=IDD_DIALOG8
 Class8=CChangebook
 Class9=CDebook
-Resource8=IDD_DIALOG7
+Resource8=IDD_DIALOG1
 Class10=CShowAllBooks
-Resource9=IDD_DIALOG8
+Resource9=IDD_DIALOG7
 Class11=CPersonal
-Resource10=IDD_DIALOG5
+Resource10=IDD_DIALOG9
 Class12=CBorrow
-Resource11=IDD_LIBRARY_DIALOG
+Resource11=IDD_DIALOG4
 Resource12=IDD_DIALOG6
 Class13=Casd
 Resource13=IDD_DIALOG11
 Class14=CInfo
-Resource14=IDD_DIALOG2
+Resource14=IDD_ABOUTBOX
 Class15=CFind
 Resource15=IDD_DIALOG12
+Class16=CDeluser
+Resource16=IDD_DIALOG13
 
 [CLS:CLibraryApp]
 Type=0
@@ -178,14 +180,11 @@ Control8=IDC_BUTTON1,button,1342242816
 [DLG:IDD_DIALOG5]
 Type=1
 Class=CDebook
-ControlCount=7
+ControlCount=4
 Control1=IDCANCEL,button,1342242816
-Control2=IDC_STATIC,static,1342308352
-Control3=IDC_EDIT1,edit,1350631552
-Control4=IDC_BUTTON1,button,1342242816
-Control5=IDC_LIST1,listbox,1352728835
-Control6=IDC_LIST2,listbox,1352728835
-Control7=IDC_STATIC,static,1342308352
+Control2=IDC_EDIT1,edit,1350631552
+Control3=IDC_BUTTON1,button,1342242816
+Control4=IDC_STATIC,static,1342308352
 
 [CLS:CChangebook]
 Type=0
@@ -293,21 +292,13 @@ VirtualFilter=dWC
 [DLG:IDD_DIALOG11]
 Type=1
 Class=CInfo
-ControlCount=14
+ControlCount=6
 Control1=IDOK,button,1342242817
 Control2=IDCANCEL,button,1342242816
-Control3=IDC_EDIT1,edit,1350631552
+Control3=IDC_EDIT3,edit,1350631552
 Control4=IDC_STATIC,static,1342308352
-Control5=IDC_EDIT2,edit,1350631552
-Control6=IDC_STATIC,static,1342308352
-Control7=IDC_EDIT3,edit,1350631552
-Control8=IDC_STATIC,static,1342308352
-Control9=IDC_EDIT4,edit,1350631552
-Control10=IDC_STATIC,static,1342308352
-Control11=IDC_EDIT7,edit,1350631552
-Control12=IDC_STATIC,static,1342308352
-Control13=IDC_LIST1,listbox,1352728835
-Control14=IDC_BUTTON1,button,1342242816
+Control5=IDC_LIST1,listbox,1352728835
+Control6=IDC_BUTTON1,button,1342242816
 
 [CLS:CInfo]
 Type=0
@@ -316,6 +307,7 @@ ImplementationFile=Info.cpp
 BaseClass=CDialog
 Filter=D
 VirtualFilter=dWC
+LastObject=CInfo
 
 [DLG:IDD_DIALOG12]
 Type=1
@@ -336,5 +328,24 @@ HeaderFile=Find.h
 ImplementationFile=Find.cpp
 BaseClass=CDialog
 Filter=D
+VirtualFilter=dWC
+LastObject=IDC_LIST2
+
+[DLG:IDD_DIALOG13]
+Type=1
+Class=CDeluser
+ControlCount=4
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_STATIC,static,1342308352
+Control4=IDC_EDIT1,edit,1350631552
+
+[CLS:CDeluser]
+Type=0
+HeaderFile=Deluser.h
+ImplementationFile=Deluser.cpp
+BaseClass=CDialog
+Filter=D
+LastObject=CDeluser
 VirtualFilter=dWC
 

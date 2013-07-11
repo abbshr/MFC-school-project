@@ -7,6 +7,7 @@
 #include "master.h"
 #include "fstream.h"
 #include "Book.h"
+#include "Public.h"
 
 CBook b3;
 #ifdef _DEBUG
@@ -31,8 +32,7 @@ void CDebook::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CDebook)
-	DDX_Control(pDX, IDC_LIST2, m_book);
-	DDX_Control(pDX, IDC_LIST1, m_num);
+
 	//}}AFX_DATA_MAP
 }
 
@@ -61,45 +61,97 @@ void CDebook::OnOK()
 
 void CDebook::OnButton1() 
 {
-	CString chart, cho[20],classname;
-	int i = 0,k = 0,s=0,c = -1,j[100];
-	GetDlgItemText(IDC_EDIT1,classname);
-CStdioFile file("fileclass.dat",CFile::modeRead|CFile::typeBinary);	
-	while (file.ReadString(chart)) {
-		if (chart == classname) {
-			i++;
-			j[c++] = i;
+	CString bookname,name;
+	CStringArray newname, newnum, newclass, newid;
+	int i=0,j;
+	GetDlgItemText(IDC_EDIT1,bookname);	
+	CStdioFile file("filename.dat",CFile::modeRead|CFile::typeBinary);
+	while (file.ReadString(name)) {
+		i++;
+		if (name != bookname) {
+			newname.Add(name);
+		} else {
+			j = i;
 		}
 	}
 	file.SeekToBegin();
 	file.Close();
-file.Open("filename.dat",CFile::modeRead|CFile::typeBinary);	
-	m_book.ResetContent();
-	while (file.ReadString(chart)) {
-		k++;
-		if (k == j[s]) {
-			cho[s] = chart;
-			s++;
+	
+	file.Open("filenum.dat",CFile::modeRead|CFile::typeBinary);
+	i=0;
+	while (file.ReadString(name)) {
+		i++;
+		if (i != j) {
+			newnum.Add(name);
 		}
-	}
-	for (i = 0; i < s; i++) {
-		m_book.AddString(cho[i]);
 	}
 	file.SeekToBegin();
 	file.Close();
 
-file.Open("filenum.dat",CFile::modeRead|CFile::typeBinary);	
-	s = 0;
-	m_num.ResetContent();
-	while (file.ReadString(chart)) {
-		k++;
-		if (k == j[s]) {
-			cho[s] = chart;
-			s++;
+	file.Open("fileclass.dat",CFile::modeRead|CFile::typeBinary);
+	i=0;
+	while (file.ReadString(name)) {
+		i++;
+		if (i != j) {
+			newclass.Add(name);
 		}
 	}
-	for (i = 0; i < s; i++) {
-		m_num.AddString(cho[i]);
+	file.SeekToBegin();
+	file.Close();
+
+	file.Open("fileid.dat",CFile::modeRead|CFile::typeBinary);
+	i=0;
+	while (file.ReadString(name)) {
+		i++;
+		if (i != j) {
+			newid.Add(name);
+		}
+	}
+	file.SeekToBegin();
+	file.Close();
+
+	file.Open("filename.dat",CFile::modeWrite|CFile::modeCreate);
+	file.Close();
+	file.Open("filenum.dat",CFile::modeWrite|CFile::modeCreate);
+	file.Close();
+	file.Open("fileclass.dat",CFile::modeWrite|CFile::modeCreate);
+	file.Close();
+	file.Open("fileid.dat",CFile::modeWrite|CFile::modeCreate);
+	file.Close();
+
+	
+	file.Open("filename.dat",CFile::modeWrite|CFile::typeBinary);
+	i=0;
+	while (i < newname.GetSize()) {
+		file.WriteString(newname.GetAt(i) + '\n');
+		i++;
+	}
+	file.SeekToBegin();
+	file.Close();
+
+	file.Open("filenum.dat",CFile::modeWrite|CFile::typeBinary);
+	i=0;
+	while (i < newnum.GetSize()) {
+		file.WriteString(newnum.GetAt(i)+ '\n');
+		i++;
+	}
+	file.SeekToBegin();
+	file.Close();
+
+	file.Open("fileclass.dat",CFile::modeWrite|CFile::typeBinary);
+	i=0;
+	while (i < newclass.GetSize()) {
+		file.WriteString(newclass.GetAt(i)+ '\n');
+		i++;
+	}
+	file.SeekToBegin();
+	file.Close();
+
+	file.Open("fileid.dat",CFile::modeWrite|CFile::typeBinary);
+	i=0;
+	while (i < newid.GetSize()) {
+		file.WriteString(newid.GetAt(i)+ '\n');
+		i++;
 	}
 	file.SeekToBegin();
 	file.Close();

@@ -6,6 +6,7 @@
 #include "master.h"
 #include "user.h"
 #include "ShowAllBooks.h"
+#include "Public.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

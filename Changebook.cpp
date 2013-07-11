@@ -8,6 +8,7 @@
 #include "master.h"
 #include "Book.h"
 #include "fstream.h"
+#include "Public.h"
 CBook b2;
 
 #ifdef _DEBUG
@@ -64,7 +65,9 @@ void CChangebook::OnButton1()
 	GetDlgItemText(IDC_EDIT2,bookname);
 	m_book.ResetContent();
 	m_number.ResetContent();
+
 	CStdioFile file("filename.dat",CFile::modeRead|CFile::typeBinary);
+	file.SeekToBegin();
 	while (file.ReadString(name)) {
 		i++;
 		if (name == bookname) {
@@ -74,7 +77,9 @@ void CChangebook::OnButton1()
 	}
 	file.SeekToBegin();
 	file.Close();
+
 	file.Open("filenum.dat",CFile::modeRead|CFile::typeBinary);
+	file.SeekToBegin();
 	while (file.ReadString(number)) {
 		j++;
 		if (i==j) {

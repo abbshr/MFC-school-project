@@ -10,6 +10,8 @@
 #include "Debook.h"
 #include "Personal.h"
 #include "Find.h"
+#include "Deluser.h"
+#include "Public.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -48,6 +50,7 @@ BEGIN_MESSAGE_MAP(CMaster, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON8, OnButton8)
 	ON_BN_CLICKED(IDC_BUTTON1, OnButton1)
 	ON_BN_CLICKED(IDC_BUTTON10, OnButton10)
+	ON_BN_CLICKED(IDC_BUTTON9, OnButton9)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -108,4 +111,10 @@ void CMaster::OnButton10()
 	CFind find;
 	find.DoModal();
 	
+}
+
+void CMaster::OnButton9() 
+{
+	CDeluser del;
+	del.DoModal();
 }

@@ -6,33 +6,6 @@
 --------------------Configuration: library - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "rc.exe /l 0x804 /fo"Debug/library.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\Administrator\Desktop\library\library.rc"" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA344.tmp" with contents
-[
-/nologo /subsystem:windows /incremental:yes /pdb:"Debug/library.pdb" /debug /machine:I386 /out:"Debug/library.exe" /pdbtype:sept 
-.\Debug\Addbook.obj
-.\Debug\Book.obj
-.\Debug\Changebook.obj
-.\Debug\Debook.obj
-.\Debug\library.obj
-.\Debug\libraryDlg.obj
-.\Debug\Master.obj
-.\Debug\ShowAllBooks.obj
-.\Debug\StdAfx.obj
-.\Debug\User.obj
-.\Debug\library.res
-.\Debug\Personal.obj
-.\Debug\Borrow.obj
-.\Debug\Lent.obj
-.\Debug\Lend.obj
-.\Debug\asd.obj
-.\Debug\Info.obj
-.\Debug\Find.obj
-]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA344.tmp"
-<h3>Output Window</h3>
-Compiling resources...
-Linking...
 
 
 

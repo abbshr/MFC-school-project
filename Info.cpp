@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "library.h"
 #include "Info.h"
+#include "Public.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -44,17 +45,49 @@ END_MESSAGE_MAP()
 
 void CInfo::OnOK() 
 {
-		
+	CString mail,mail1;
+	CStringArray newlist;
+	int i = 0;
+	GetDlgItemText(IDC_EDIT3,mail);	
+	CStdioFile file("userinfo.txt",CFile::modeRead|CFile::typeBinary);
+	while(file.ReadString(mail1)){
+		i++;
+		if (i == CPublic::usmark) {
+			newlist.Add(mail);
+		} else {
+			newlist.Add(mail1);
+		}
+	}
+	file.SeekToBegin();
+	file.Close();
+
+	file.Open("userinfo.txt",CFile::modeWrite|CFile::modeCreate);
+	file.Close();
+
+	file.Open("userinfo.txt",CFile::modeWrite|CFile::typeBinary);
+	i = 0;
+	while (i < newlist.GetSize()) {
+		file.WriteString(newlist.GetAt(i) + '\n');
+		i++;
+	}
+	file.SeekToBegin();
+	file.Close();
+
 	CDialog::OnOK();
 }
 
 void CInfo::OnButton1() 
 {
 	CString chart;
+	int i=0;
 	CStdioFile file("userinfo.txt",CFile::modeRead|CFile::typeBinary);	
 	m_info.ResetContent();
 	while (file.ReadString(chart)) {
-		m_info.AddString(chart);
+		i++;
+		if (i == CPublic::usmark) {
+			m_info.AddString(chart);
+			break;
+		}
 	}
 	file.SeekToBegin();
 	file.Close();	
